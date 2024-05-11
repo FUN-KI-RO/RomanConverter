@@ -1,6 +1,6 @@
 test("Example", function(assert) 
 {
-  assert.propEqual(convertRomanToInteger("I"), {value: 1, message: '', result: true}, "TC-0");
+  assert.propEqual(convertRomanToInteger("2"), {value: 1, message: '', result: true}, "TC-0");
 
   assert.propEqual(convertIntegerToRoman(10), {value: "X", message: '', result: true}, "TC-1");
   assert.propEqual(convertIntegerToRoman(0), {value: 0, message: 'Out of range (1-3999)', result: false}, "TC-2");
