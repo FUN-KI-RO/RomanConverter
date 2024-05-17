@@ -97,11 +97,12 @@ const convertRomanToInteger = function(roman) {
   response.result = true;
 
     // Track the conversion event with Google Analytics
-  /* global gtag */  // <-- Added to declare gtag as a global variable
+  /* global gtag */ 
   gtag('event', 'roman_conversion', {
-    'roman_input': roman,
-    'converted_integer': sum
+    'roman_input' : roman,
+    'converted_integer' : sum
   });
+
 
   return response;
 };
@@ -165,10 +166,10 @@ const convertIntegerToRoman = function(num) {
   response.result = true;
 
     // Track the conversion event with Google Analytics
-  /* global gtag */  // <-- Added to declare gtag as a global variable
+  /* global gtag */ 
   gtag('event', 'integer_conversion', {
-    'integer_input': num,
-    'converted_roman': str
+    'integer_input' : num,
+    'converted_roman' : str
   });
 
   return response;
