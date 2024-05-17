@@ -12,6 +12,7 @@ function init() {
   var outputArea = document.querySelector('.convert-output');
   var inputArea = document.querySelector('input[type=\'text\']');
 
+
   modeCheckbox.addEventListener('change', function(e) {
     header.innerHTML = getModeTitle(e.target.checked);
   });
@@ -95,12 +96,6 @@ const convertRomanToInteger = function(roman) {
   response.value = sum;
   response.result = true;
 
-  // Track the conversion event with Google Analytics
-  gtag('event', 'roman_conversion', {
-    'roman_input': roman,
-    'converted_integer': sum
-  });
-
   return response;
 };
 
@@ -161,12 +156,6 @@ const convertIntegerToRoman = function(num) {
 
   response.value = str;
   response.result = true;
-
-  // Track the conversion event with Google Analytics
-  gtag('event', 'integer_conversion', {
-    'integer_input': num,
-    'converted_roman': str
-  });
 
   return response;
 };
@@ -264,4 +253,14 @@ if (!String.prototype.repeat) {
       if ((count & 1) == 1) {
         rpt += str;
       }
-      count >>>
+      count >>>= 1;
+      if (count == 0) {
+        break;
+      }
+      str += str;
+    }
+    // Could we try:
+    // return Array(count + 1).join(this);
+    return rpt;
+  };
+}
