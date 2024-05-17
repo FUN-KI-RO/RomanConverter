@@ -96,7 +96,7 @@ const convertRomanToInteger = function(roman) {
   response.value = sum;
   response.result = true;
 
-    // Track the conversion event with Google Analytics
+  // Track the conversion event with Google Analytics
   /* global gtag */ 
   gtag('event', 'roman_conversion', {
     'roman_input' : roman,
@@ -165,7 +165,7 @@ const convertIntegerToRoman = function(num) {
   response.value = str;
   response.result = true;
 
-    // Track the conversion event with Google Analytics
+  // Track the conversion event with Google Analytics
   /* global gtag */ 
   gtag('event', 'integer_conversion', {
     'integer_input' : num,
