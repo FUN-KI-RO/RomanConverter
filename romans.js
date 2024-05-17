@@ -96,6 +96,12 @@ const convertRomanToInteger = function(roman) {
   response.value = sum;
   response.result = true;
 
+    // Track the conversion event with Google Analytics
+  gtag('event', 'roman_conversion', {
+    'roman_input': roman,
+    'converted_integer': sum
+  });
+
   return response;
 };
 
@@ -156,6 +162,12 @@ const convertIntegerToRoman = function(num) {
 
   response.value = str;
   response.result = true;
+
+    // Track the conversion event with Google Analytics
+  gtag('event', 'integer_conversion', {
+    'integer_input': num,
+    'converted_roman': str
+  });
 
   return response;
 };
